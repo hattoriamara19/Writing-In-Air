@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width,
+        initial-scale=1.0,
+        maximum-scale=1.0,
+        user-scalable=no">
+
+    <title>Air Pen Writing</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <header>
+        <h1>✍️ Air Pen Writing</h1>
+        <p>Pure JavaScript • No OpenCV</p>
+    </header>
+
+    <!-- CAMERA -->
+    <section class="camera-section">
+
+        <div class="camera-container">
+
+            <video id="camera"
+                autoplay
+                muted
+                playsinline></video>
+
+            <canvas id="overlayCanvas"></canvas>
+
+            <canvas id="processingCanvas"></canvas>
+
+            <div id="detectedDot"></div>
+
+            <div id="cameraMessage">
+                Camera not started
+            </div>
+
+        </div>
+
+        <div class="camera-info">
+            Camera:
+            <strong id="cameraMode">Front</strong>
+        </div>
+
+    </section>
+
+    <!-- STATUS -->
+    <div id="status" class="status">
+        Ready. Press Start Camera.
+    </div>
+
+    <!-- CONTROLS -->
+    <section class="controls">
+
+        <button id="startBtn" class="start">
+            ▶ Start Camera
+        </button>
+
+        <button id="calibrateBtn">
+            🎯 Start Calibration
+        </button>
+
+        <button id="switchBtn">
+            🔄 Switch Camera
+        </button>
+
+        <button id="stopBtn">
+            ⏹ Stop
+        </button>
+
+        <button id="undoBtn">
+            ↩ Undo
+        </button>
+
+        <button id="clearBtn">
+            🗑 Clear
+        </button>
+
+        <button id="saveBtn" class="save">
+            💾 Save PNG
+        </button>
+
+    </section>
+
+    <!-- DRAWING -->
+    <section class="drawing-section">
+
+        <h2>Writing Area</h2>
+
+        <canvas id="drawingCanvas"></canvas>
+
+    </section>
+
+    <!-- INSTRUCTIONS -->
+    <section class="instructions">
+
+        <h2>📖 How to Use</h2>
+
+        <ol>
+
+            <li>
+                Put a small bright
+                <b>green/yellow marker</b>
+                on the pen tip.
+            </li>
+
+            <li>
+                Press
+                <b>Start Camera</b>.
+            </li>
+
+            <li>
+                Make sure the colored tip
+                is visible.
+            </li>
+
+            <li>
+                Press
+                <b>Start Calibration</b>.
+            </li>
+
+            <li>
+                Move the pen tip to
+                <b>TOP-LEFT</b>
+                and press the calibration button.
+            </li>
+
+            <li>
+                Move to
+                <b>TOP-RIGHT</b>
+                and press again.
+            </li>
+
+            <li>
+                Move to
+                <b>BOTTOM-RIGHT</b>
+                and press again.
+            </li>
+
+            <li>
+                Move to
+                <b>BOTTOM-LEFT</b>
+                and press again.
+            </li>
+
+            <li>
+                Calibration will finish
+                automatically.
+            </li>
+
+            <li>
+                Move the pen in the air
+                to write.
+            </li>
+
+            <li>
+                Move the pen to the
+                yellow <b>PEN-UP</b> area
+                to stop the current stroke.
+            </li>
+
+            <li>
+                Use
+                <b>Undo</b>,
+                <b>Clear</b> and
+                <b>Save PNG</b>
+                when required.
+            </li>
+
+        </ol>
+
+        <div class="tip">
+
+            💡 <b>Best setup:</b>
+            Use a small bright green/yellow
+            tape or marker on the pen tip
+            and use good lighting.
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
