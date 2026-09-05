@@ -32,9 +32,7 @@ header {
     border-radius: 14px;
     text-align: center;
     margin-bottom: 15px;
-
-    box-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 header h1 {
@@ -54,27 +52,20 @@ header p {
     background: white;
     padding: 10px;
     border-radius: 14px;
-
-    box-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .camera-container {
     position: relative;
-
     width: 100%;
     aspect-ratio: 4 / 3;
-
     background: #111;
-
     overflow: hidden;
-
     border-radius: 10px;
 }
 
 #camera {
     position: absolute;
-
     left: 0;
     top: 0;
 
@@ -82,15 +73,6 @@ header p {
     height: 100%;
 
     object-fit: cover;
-}
-
-/*
-    Front camera is mirrored so
-    movement feels natural.
-*/
-
-#camera.front {
-    transform: scaleX(-1);
 }
 
 #overlayCanvas {
@@ -110,8 +92,6 @@ header p {
 #processingCanvas {
     display: none;
 }
-
-/* DETECTION DOT */
 
 #detectedDot {
     position: absolute;
@@ -139,8 +119,6 @@ header p {
     pointer-events: none;
 }
 
-/* CAMERA MESSAGE */
-
 #cameraMessage {
     position: absolute;
 
@@ -151,7 +129,7 @@ header p {
         translate(-50%, -50%);
 
     background:
-        rgba(0, 0, 0, 0.65);
+        rgba(0,0,0,0.65);
 
     color: white;
 
@@ -165,8 +143,6 @@ header p {
 
     z-index: 15;
 }
-
-/* CAMERA INFO */
 
 .camera-info {
     text-align: center;
@@ -192,7 +168,7 @@ header p {
     font-weight: bold;
 
     box-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.06);
+        0 2px 8px rgba(0,0,0,0.06);
 }
 
 /* BUTTONS */
@@ -254,7 +230,7 @@ button.save {
     border-radius: 14px;
 
     box-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.08);
+        0 2px 8px rgba(0,0,0,0.08);
 }
 
 .drawing-section h2 {
@@ -293,7 +269,7 @@ button.save {
     border-radius: 14px;
 
     box-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.08);
+        0 2px 8px rgba(0,0,0,0.08);
 }
 
 .instructions h2 {
@@ -342,9 +318,7 @@ button.save {
 
     button {
         font-size: 13px;
-
-        padding:
-            12px 5px;
+        padding: 12px 5px;
     }
 
     .instructions {
